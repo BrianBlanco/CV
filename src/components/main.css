@@ -1,0 +1,139 @@
+/* MAIN CSS */
+
+html {
+    background: #485563;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    max-height: 100vh;
+    width: auto;
+    animation: onLoadPage 3s ease-in-out;
+    /*
+    background: #43cea2;
+    background: -webkit-linear-gradient(to right, #185a9d, #43cea2);
+    background: linear-gradient(to right, #185a9d, #43cea2);
+*/
+    /* Friday 
+    background: #83a4d4;
+    background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);
+    background: linear-gradient(to right, #b6fbff, #83a4d4);
+*/
+    /* Black */
+    background: #485563;
+    background: -webkit-linear-gradient(to right, #29323c, #485563);
+    background: linear-gradient(to right, #29323c, #485563);
+}
+
+#main>div {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Position of both arrows that changes the page */
+
+#scrollButtons>svg[data-icon="arrow-left"] {
+    position: fixed;
+    top: 50%;
+    left: 2%;
+    animation: buttonMotion 1.5s ease-in-out infinite;
+}
+
+#scrollButtons>svg[data-icon="arrow-right"] {
+    position: fixed;
+    top: 50%;
+    right: 2%;
+    animation: buttonMotion 1.5s ease-in-out infinite;
+}
+
+/* Initial button to start */
+
+.wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.link_wrapper {
+    position: relative;
+}
+
+a {
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #333;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #333;
+    transition: all .35s;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .35s;
+}
+
+.icon svg {
+    width: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    transform: rotate(-45deg);
+    fill: #2ecc71;
+    transition: all .35s;
+}
+
+a:hover {
+    width: 200px;
+    border: 3px solid #2ecc71;
+    background: transparent;
+    color: #2ecc71;
+}
+
+a:hover+.icon {
+    border: 3px solid #2ecc71;
+    right: -25%;
+}
+
+/* ANIMATIONS */
+
+@keyframes buttonMotion {
+    0% {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    50% {
+        margin-left: -1%;
+        margin-right: 1%;
+    }
+    100% {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+
+@keyframes onLoadPage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

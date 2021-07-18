@@ -1,0 +1,18 @@
+#aboutMe {
+    display: grid;
+    grid-template-columns: 2fr 3fr 4fr;
+}
+
+#aboutMe div {
+    height: 100vh;
+}
+
+#aboutMe img {
+    object-fit: fill;
+    width: 100%;
+    max-height: 100%;
+}
+
+.menuPhotos {
+    display: grid;
+}
