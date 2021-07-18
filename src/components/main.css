@@ -5,8 +5,6 @@ html {
 }
 
 #main {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     overflow-y: hidden;
     overflow-x: hidden;
     max-height: 100vh;
@@ -28,7 +26,13 @@ html {
     background: linear-gradient(to right, #29323c, #485563);
 }
 
-#main>div {
+#mainPages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+
+#mainPages>div {
     height: 100vh;
     width: 100vw;
 }
@@ -48,6 +52,25 @@ html {
     right: 2%;
     animation: buttonMotion 1.5s ease-in-out infinite;
 }
+
+/* Languaje Flags */
+.languageFlags {
+    position: fixed;
+    top: 5%;
+}
+
+.languageFlags img {
+    max-width: 4%;
+    float: left;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.highlighted {
+    opacity: 1 !important;
+}
+
+
 
 /* Initial button to start */
 

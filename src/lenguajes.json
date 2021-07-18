@@ -1,8 +1,18 @@
 {
     "spanish": {
-        "onLoadButton": "Empezar"
+        "onLoadButton": "Empezar",
+        "pageTitle": {
+            "menu": "Menu",
+            "aboutMe": "Sobre mí",
+            "skills": "Habilidades"
+        }
     },
     "english": {
-        "onLoadButton": "Start"
+        "onLoadButton": "Start",
+        "pageTitle": {
+            "menu": "Menu",
+            "aboutMe": "About Me",
+            "skills": "Skills"
+        }
     }
 }
